@@ -1,12 +1,10 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
 name: My automation
-
 on:
   push:
     branches:
-      - '**'
-
+      - "**"
 jobs:
   build:
     steps:
@@ -15,3 +13,10 @@ jobs:
         shell: sh
         run: |
           echo "hello world"
+  job1:
+    needs:
+      - build
+    environment: pod-2-staging
+    steps:
+      - name: sayhello
+        uses: cloudbees-io/checkout@v1
