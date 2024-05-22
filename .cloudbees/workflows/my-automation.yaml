@@ -1,13 +1,14 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
 name: My automation
-#!!!!!
 on:
   push:
     branches:
-      - '**'
-
+      - "**"
+  
   workflow_dispatch:
+    branches:
+      - "dev"
     inputs:
       test: 
         default: default test val
