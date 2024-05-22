@@ -7,8 +7,6 @@ on:
       - "**"
   
   workflow_dispatch:
-    branches:
-      - "dev"
     inputs:
       test: 
         default: default test val
