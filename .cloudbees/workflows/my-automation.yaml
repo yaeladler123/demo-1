@@ -8,6 +8,11 @@ on:
       - '**'
 
   workflow_dispatch:
+    inputs:
+      test: 
+        default: default test val
+        required: true
+        description: test input
 
 jobs:
   build:
