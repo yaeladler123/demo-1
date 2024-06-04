@@ -7,7 +7,6 @@ on:
       - "**"
 jobs:
   build:
-    id: "toto build"
     steps:
       - name: Say hello
         id: "toto"
