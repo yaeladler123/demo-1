@@ -2,14 +2,16 @@ apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
 name: Test
 on:
+  workflow_dispatch:
+    
   push:
     branches:
-      - "**"
+      - main
 jobs:
   build:
     steps:
       - name: Say hello
-        id: "toto"
+        id: toto
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
