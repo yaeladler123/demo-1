@@ -15,4 +15,9 @@ jobs:
         run: |
           echo "hello test"
           echo "${{ cloudbees.api.token }}" | base64
+          for i in {1..20}
+          do
+            echo "sleeping $i seconds"
+            sleep $i
+          done
           env
